@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { Text } from 'pixi-svelte';
-	import { WHITE } from 'constants-shared/colors';
 
 	import UiSprite from './UiSprite.svelte';
 	import { UI_BASE_FONT_SIZE } from '../constants';
@@ -15,16 +14,16 @@
 	const props: Props = $props();
 
 	const labelStyle = {
-		fontFamily: 'proxima-nova',
-		fontSize: UI_BASE_FONT_SIZE,
-		fill: WHITE,
-	} as const;
+    fontFamily: 'proxima-nova',
+    fontSize: UI_BASE_FONT_SIZE,
+    fill: 0xb44fff,
+} as const;
 
-	const valueStyle = {
-		fontFamily: 'proxima-nova',
-		fontSize: UI_BASE_FONT_SIZE,
-		fill: WHITE,
-	} as const;
+const valueStyle = {
+    fontFamily: 'proxima-nova',
+    fontSize: UI_BASE_FONT_SIZE,
+    fill: 0xffd700,
+} as const;
 </script>
 
 {#if props.stacked}
@@ -32,7 +31,7 @@
 		<UiSprite
 			y={-20}
 			anchor={{ x: 0.5, y: 0 }}
-			key="base_ticker"
+			key="balance_ticker"
 			width={UI_BASE_FONT_SIZE * 3 * (326 / 73)}
 			height={UI_BASE_FONT_SIZE * 3}
 			borderRadius={35}
@@ -45,7 +44,7 @@
 		<UiSprite
 			x={-90}
 			anchor={{ x: 0, y: 0.5 }}
-			key="base_ticker"
+			key="balance_ticker"
 			width={UI_BASE_FONT_SIZE * 3 * (326 / 73)}
 			height={UI_BASE_FONT_SIZE * 3}
 			borderRadius={35}

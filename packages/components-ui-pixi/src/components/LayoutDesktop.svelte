@@ -2,7 +2,7 @@
 	import { stateUi } from 'state-shared';
 	import { BLACK } from 'constants-shared/colors';
 	import { MainContainer } from 'components-layout';
-	import { Container, Rectangle, anchorToPivot } from 'pixi-svelte';
+	import { Container, Rectangle, Sprite, anchorToPivot } from 'pixi-svelte';
 
 	import { DESKTOP_BASE_SIZE, DESKTOP_BACKGROUND_WIDTH_LIST } from '../constants';
 	import { getContext } from '../context';
@@ -33,8 +33,8 @@
 		})}
 	>
 		<Container y={DESKTOP_BASE_SIZE * 0.5 - 160} x={900 - 500} scale={0.8}>
-			{@render props.amountBalance({ stacked: true })}
-		</Container>
+    {@render props.amountBalance({ stacked: true })}
+</Container>
 
 		<Container y={DESKTOP_BASE_SIZE * 0.5 - 160} x={900} scale={0.8}>
 			{@render props.amountWin({ stacked: true })}
